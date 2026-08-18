@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f4ff;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+
+    width: 400px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.container > p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.busca {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.busca input {
+    flex: 1;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.busca button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #2980b9;
+    color: white;
+
+    cursor: pointer;
+}
+
+.busca button:hover {
+    background-color: #1f6391;
+}
+
+.resultado {
+    background-color: #f5f9fc;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.resultado h2 {
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    margin: 10px 0;
+}
+
+.temperatura {
+    font-size: 40px;
+    font-weight: bold;
+}
