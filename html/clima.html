@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Clima e Previsão</title>
+    <link rel="stylesheet" href="../styles/clima.css">
+</head>
+<body>
+    <main class="container">
+
+        <h1>Previsão do Tempo</h1>
+
+        <p>Digite o nome de uma cidade para consultar o clima atual.</p>
+
+        <section class="busca">
+
+            <input 
+                type="text" 
+                id="cidade" 
+                placeholder="Digite uma cidade"
+            >
+
+            <button id="buscar">
+                Buscar
+            </button>
+
+        </section>
+
+        <section class="resultado">
+            <h2 id="nomeCidade">
+                Cidade
+            </h2>
+
+            <p class="temperatura">
+                <span id="temperatura">--</span> °C
+            </p>
+            
+            <p>
+                Clima:
+                <span id="descricao">--</span>
+            </p>
+
+            <p>
+                Sensação térmica:
+                <span id="sensacao">--</span> °C
+            </p>
+
+            <p>
+                Umidade:
+                <span id="umidade">--</span>%
+            </p>
+
+            <p>
+                Vento:
+                <span id="vento">--</span> km/h
+            </p>
+        </section>
+</body>
+</html>
