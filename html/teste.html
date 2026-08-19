@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget de Previsão do Tempo</title>
+  <!-- Inclusão do Google Fonts e FontAwesome para os Ícones -->
+  <link rel="stylesheet" href="https://googleapis.com">
+  <link rel="stylesheet" href="https://cloudflare.com">
+  <link rel="stylesheet" href="../styles/teste.css">
+</head>
+<body>
+
+  <div class="weather-container">
+    <!-- Cabeçalho Principal -->
+    <header class="weather-header">
+      <h2>Previsão do Tempo para Hoje em <span id="city">Piracicaba (SP)</span> <i class="fa-regular fa-star star-icon"></i></h2>
+      <div class="summary-box">
+        <p class="summary-title" id="summary-title">Hoje será parecido com ontem</p>
+        <p class="summary-text" id="summary-text">Dia ensolarado, com nevoeiro ao amanhecer. As nuvens aumentam bastante à noite.</p>
+      </div>
+    </header>
+
+    <!-- Períodos do Dia -->
+    <section class="day-periods">
+      <div class="period-item">
+        <span class="period-icon"><i class="fa-solid fa-moon"></i></span>
+        <span class="period-name">Madrugada</span>
+      </div>
+      <div class="period-item">
+        <span class="period-icon text-yellow"><i class="fa-solid fa-cloud-sun"></i></span>
+        <span class="period-name">Manhã</span>
+      </div>
+      <div class="period-item text-yellow">
+        <span class="period-icon"><i class="fa-solid fa-sun"></i></span>
+        <span class="period-name">Tarde</span>
+      </div>
+      <div class="period-item">
+        <span class="period-icon"><i class="fa-solid fa-cloud-moon"></i></span>
+        <span class="period-name">Noite</span>
+      </div>
+    </section>
+
+    <!-- Grade de Métricas Detalhadas -->
+    <footer class="metrics-grid">
+      <!-- Item 1: Temperatura -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-temperature-three-quarters label-icon blue"></i> Temperatura</div>
+        <div class="metric-values">
+          <span class="val-min" id="temp-min">15°</span>
+          <span class="val-max" id="temp-max">33°</span>
+        </div>
+      </div>
+
+      <!-- Item 2: Sensação Térmica -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-temperature-empty label-icon blue"></i> Sensação térmi...</div>
+        <div class="metric-values">
+          <span class="val-min" id="sens-min">15°</span>
+          <span class="val-max" id="sens-max">24°</span>
+        </div>
+      </div>
+
+      <!-- Item 3: Chuva -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-cloud-rain label-icon"></i> Chuva <i class="fa-regular fa-circle-question info-icon"></i></div>
+        <div class="metric-values single-val" id="rain-val">0.0mm</div>
+      </div>
+
+      <!-- Item 4: Umidade do Ar -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-droplet label-icon blue"></i> Umidade do ar</div>
+        <div class="metric-values">
+          <span class="val-min" id="hum-min">32%</span>
+          <span class="val-max" id="hum-max">86%</span>
+        </div>
+      </div>
+
+      <!-- Item 5: Vento -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-arrow-left label-icon"></i> Vento</div>
+        <div class="metric-values single-val" id="wind-val"><i class="fa-solid fa-arrow-left arrow-rotate"></i> ENE - 6km/h</div>
+      </div>
+
+      <!-- Item 6: Rajada de Vento -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-wind label-icon"></i> Rajada de vento</div>
+        <div class="metric-values single-val" id="gust-val"><i class="fa-solid fa-arrow-left arrow-rotate"></i> ENE - 28km/h</div>
+      </div>
+
+      <!-- Item 7: Sol -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-regular fa-sun label-icon"></i> Sol</div>
+        <div class="metric-values single-val" id="sun-hours">06:33h às 17:55h</div>
+      </div>
+
+      <!-- Item 8: Arco-íris -->
+      <div class="metric-card">
+        <div class="metric-label"><i class="fa-solid fa-rainbow label-icon"></i> Arco-íris</div>
+        <div class="metric-values single-val value-muted" id="rainbow-val">Sem probabilid.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/teste.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* Configurações Gerais de Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container Principal */
+.weather-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 760px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+/* Cabeçalho */
+.weather-header h2 {
+  font-size: 18px;
+  color: #004684;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weather-header h2 span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.star-icon {
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.summary-box {
+  margin-bottom: 24px;
+}
+
+.summary-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.summary-text {
+  font-size: 13.5px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* Períodos do Dia */
+.day-periods {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.period-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #718096;
+}
+
+.period-icon {
+  font-size: 20px;
+}
+
+.period-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.text-yellow {
+  color: #f5a623;
+}
+
+/* Grade de Métricas Inferior */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.metric-card {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #4a5568;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label-icon {
+  font-size: 13px;
+  color: #718096;
+}
+
+.label-icon.blue {
+  color: #0073e6;
+}
+
+.info-icon {
+  font-size: 11px;
+  color: #a0aec0;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+/* Valores Dentro dos Cards */
+.metric-values {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.val-min {
+  color: #0073e6;
+}
+
+.val-max {
+  color: #ff3b30;
+}
+
+.single-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-top: 6px;
+}
+
+.value-muted {
+  color: #718096;
+  font-weight: 400;
+}
+
+.arrow-rotate {
+  transform: rotate(45deg);
+  font-size: 12px;
+  margin-right: 2px;
+}
+
+/* Responsividade para Telas Menores (Tablets e Celulares) */
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .day-periods {
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
