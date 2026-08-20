@@ -9,73 +9,78 @@
 <body>
     <main class="container">
 
+        
         <h1>Previsão do Tempo</h1>
-
+        
         <p>Digite o nome de uma cidade para consultar o clima atual.</p>
-
+        
         <section class="busca">
-
+            
             <input 
                 type="text" 
                 id="cidade" 
                 placeholder="Digite uma cidade"
-            >
+                >
 
-            <button id="buscar">
-                Buscar
+                <button id="buscar">
+                    Buscar
             </button>
-
+            
+            
         </section>
-
+        <h2 id="nomeCidade">Cidade</h2>
+        
         <section class="resultado">
             <div class="temp-card">
-             <div class="font-temp">Temperatura</div>
+                <div class="font-temp">Temperatura</div>
                 <div class="temp-valores">
-                    <span class="valor-min" id="temp-min">--</span>
-                    <span class="valor-max" id="temp-max">--</span>
+                    <p class="valor-min"><span id="temp-min">--</span>°</p>
+                    <p class="valor-max"><span id="temp-max">--</span>°</p>
                 </div>
             </div>
-
-             <div class="sensa-card">
+            
+            <div class="sensa-card">
                <div class="font-sensa">Sensação térmica</div>
                 <div class="sensa-valores">
-                    <span class="valor-min" id="sensa-min">--C°</span>
-                    <span class="valor-max" id="sensa-max">--C°</span>
+                    <p class="valor-min"><span id="sensa-min">--C</span>°</p>
+                    <p class="valor-max"><span id="sensa-max">--C</span>°</p>
                 </div>
             </div>
-
+            
             <div class="chuva-card">
-             <div class="font-chuva">Chuva</div>
+                <div class="font-chuva">Chuva</div>
                 <div class="chuva-valor" id="chuva-valor">0.0mm</div>
             </div>
             
             <div class="umida-card">
-             <div class="font-umida">Umidade do ar</div>
+                <div class="font-umida">Umidade do ar</div>
                 <div class="umida-valores">
-                    <span class="valor-min" id="temp-min">--</span>
-                    <span class="valor-max" id="temp-max">--</span>
+                    <p class="valor-min"><span id="umida-min">--</span>%</p>
+                    <p class="valor-max"><span id="umida-max">--</span>%</p>
                 </div>
             </div>
-
-            <div class="chuva-card">
-             <div class="font-chuva">Chuva</div>
-                <div class="chuva-valor" id="chuva-valor">0.0mm</div>
+            
+            <div class="vento-card">
+                <div class="font-vento">Vento</div>
+                <div class="vento-valor" id="vento-valor">ENE --mm</div>
+            </div>
+            
+            <div class="rajada-card">
+             <div class="font-rajada">Rajada de vento</div>
+                <div class="rajada-valor" id="rajada-valor">ENE -- mm</div>
+            </div>
+            
+            <div class="sol-card">
+             <div class="font-sol">Sol</div>
+             <div class="sol-valor" id="sol-valor">--h ás --h</div>
             </div>
 
-            <div class="chuva-card">
-             <div class="font-chuva">Chuva</div>
-                <div class="chuva-valor" id="chuva-valor">0.0mm</div>
-            </div>
-
-            <div class="chuva-card">
-             <div class="font-chuva">Chuva</div>
-                <div class="chuva-valor" id="chuva-valor">0.0mm</div>
-            </div>
-
-            <div class="chuva-card">
-             <div class="font-chuva">Chuva</div>
-                <div class="chuva-valor" id="chuva-valor">0.0mm</div>
+            <div class="arco-card">
+                <div class="font-arco">Arco-íris</div>
+                <div class="arco-valor" id="arco-valor">Sem probabilid.</div>
             </div>
         </section>
+        <script src="../js/clima.js"></script>
+    </main>
 </body>
 </html>
