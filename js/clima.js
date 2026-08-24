@@ -13,9 +13,48 @@ function buscarClima() {
 
     const chaveApi = "df7622edbc8c4800b6f1a2f870860829";
 
+    const urlPrevisao =
+        `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${chaveApi}&units=metric&lang=pt_br`;
+
     const url =
         `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${chaveApi}&units=metric&lang=pt_br`;
+    
+    fetch(urlPrevisao)
 
+        .then(function(resposta) {
+            return resposta.json();
+        })
+        .then(function(previsao) {
+
+            const horarios = [];
+            const temperaturas = [];
+
+            previsao.list.forEach(function(item) {
+                horarios.push(item.dt_txt);
+                temperaturas.push(item.main.temp);
+            });
+
+            const trace = {
+                type: "scatter",
+                x: horarios,
+                y: temperaturas,
+                mode: "lines+markers",
+                name: "Temperatura"
+            };
+
+            const layout = {
+                title: "Previsão de temperatura",
+                xaxis: {
+                    title: "Horário"
+                },
+                yaxis: {
+                    title: "Temperatura (°C)"
+                }
+            };
+
+            Plotly.newPlot("grafico", [trace], layout);
+        });
+    
     fetch(url)
 
         .then(function(resposta) {
@@ -64,7 +103,7 @@ function buscarClima() {
 
             function calcularSolPor(){
                 const timezone = dados.timezone
-                const sunrise = dados.sys.sunrise
+                const sunrise = dados.sys.sunset
 
                 const timestampLocal = (sunrise + timezone) * 1000;
                 const dataLocal = new Date(timestampLocal);
@@ -80,7 +119,7 @@ function buscarClima() {
 
             function calcularSolNascer(){
                 const timezone = dados.timezone
-                const sunrise = dados.sys.sunset
+                const sunrise = dados.sys.sunrise
 
                 const timestampLocal = (sunrise + timezone) * 1000;
                 const dataLocal = new Date(timestampLocal);
@@ -94,6 +133,7 @@ function buscarClima() {
 
             calcularSolNascer()
         })
+        
 
         .catch(function(erro) {
 

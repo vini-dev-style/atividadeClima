@@ -15,13 +15,16 @@ body {
 
 .container {
     background-color: white;
-    width: 400px;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     width: 800px;
     height: 500px;
+    margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
 
 }
 
@@ -305,4 +308,19 @@ h1 {
   font-size: 15px;
   font-weight: 100;
   color: #4a5568;
+}
+
+.sessao-grafico {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  /* width: 800px; */
+  /* height: 500px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  /* margin-right: 100px; */
 }
